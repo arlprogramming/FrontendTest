@@ -1,0 +1,14 @@
+.container__crud{
+    width: 800px;
+    margin: 0 auto;
+    padding: 0;
+    /* background-color: aquamarine; */
+}
+
+.container__Edit{
+    margin: 50px auto;
+}
+
+.container__Add {
+    margin: 50px auto;
+}
