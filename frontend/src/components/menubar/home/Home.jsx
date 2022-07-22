@@ -1,16 +1,19 @@
 import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./home.css";
-
 import logo from "../../../logo.svg";
 
 import { auth } from "../../../firebase/firebase";
 
 const Home = () => {
+  const navigate = useNavigate();
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
-      //jika user exist berarti ada yang login
       if (!user) {
-        user.history.pushState("/login");
+        navigate("/login");
+      }
+      if (user) {
+        navigate("/");
       }
     });
   });
